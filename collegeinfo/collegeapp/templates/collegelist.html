@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College-List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <h1>College-List</h1>
+    
+    <table class="table table-blue">
+        <thead>
+          <tr>
+            <th scope="col">cid</th>
+            <th scope="col">cname</th>
+            <th scope="col">clocation</th>
+            <th scope="col">cusn</th>
+            <th scope="col">cdepartment</th>  
+          </tr>
+        </thead>
+       
+        <tbody>
+            {% for i in college %}
+          <tr>
+            <td>{{i.cid}}</td>
+            <td>{{i.cname}}</td>
+            <td>{{i.clocation}}</td>
+            <td>{{i.totalnostudents}}</td>
+            <td>{{i.noofdepartments}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+        
+      </table>
+    
+
+</body>
+</html>
